@@ -1,0 +1,107 @@
+.container{
+   display: flex;
+   position: relative;
+   max-width: 70rem;
+   justify-content: center;
+}
+.top_box{
+     display: flex;
+    justify-content: center;
+    align-items: center;
+   object-fit: cover;
+   width: 100%;
+   position: relative;
+}
+.top_image{
+    width: 100%;
+    object-fit: cover;
+    border-radius: 7px;
+    box-shadow: 1px 1px 200px 2px;
+}
+.top_box_cont{
+    width: 100%;
+    position: absolute;
+    color: rgb(170, 175, 170);
+    text-shadow: 2px 2px  2px #000000;
+    display: flex;
+    flex-direction: column;
+}
+.location{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    top: 10rem; 
+   position: absolute;
+}
+.left{
+    margin-left: 10px;
+    max-width: 30rem;
+}
+.left2{
+      display: flex;
+    flex-direction: column;
+}
+.location2{
+    width: 100%;
+    top: 18rem;
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.right{
+      margin-left: 10px;
+    max-width: 30rem;
+    display: flex;
+    flex-direction: column;
+}
+.bottom_container{
+    display: flex;  
+    align-items: stretch;
+    bottom: 0rem;
+    max-height: 13rem;
+    width: 100%;
+    position: absolute;
+    color: aqua;
+    font-size: larger;
+    font-weight: bold;
+    overflow-x: auto;
+}
+.box{
+    width:100% ;
+      display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    min-height: 100%;
+    border: 2px solid black;
+    background: transparent;
+    flex-direction: column;
+   background-color: rgba(0,0,0, 0.4);
+    min-width: 10rem;
+
+}
+.search_label{
+    background-color: white;
+    padding: 10px 0px;
+    border-radius: 2px;
+  
+}
+input[type=search] {
+    outline: transparent;
+    border: white;
+    padding: 2px;
+    width: 70px;
+    font-size:medium;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+input[type=search]:focus {
+        width: 250px;
+}
+
+@media screen and (max-width:1000px) {
+    .top_image{
+   min-height: 90vh;
+}
+}

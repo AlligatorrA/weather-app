@@ -1,0 +1,24 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.marg0{
+    margin: 0;
+}
+.icon_bg{
+    box-shadow: inset 2px 2px 200px 30px rgb(91, 88, 88);
+    border-radius: 50%;
+}
+::-webkit-scrollbar {
+    width: 0px;
+    height: 1px;
+}
+::-webkit-scrollbar-track {
+    background-color: forestgreen;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+}

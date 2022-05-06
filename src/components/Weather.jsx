@@ -11,7 +11,7 @@ const Weather = () => {
     const months = ['jan', 'feb', 'march', 'apr', 'may', 'june', 'july', 'aug', 'sep', 'oct', 'nov', 'dec']
     const month = months[date.getMonth()]
     const [search, setSearch] = useState('mumbai')
-    const { data, loading, error } = useFetch(`http://api.openweathermap.org/data/2.5/weather?q=${search}&units=metric&appid=7cab18b5480bd74503a5c61322b4225f `)
+    const { data, loading, error } = useFetch(`http://api.openweathermap.org/data/2.5/weather?q=${search}&units=metric&appid=6ddb3070ef81dc8ad9a2934ab91be26b `)
 
     const { data: quotes } = useFetch(`https://api.quotable.io/random`)
     const searchHandler = (e) => {

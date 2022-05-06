@@ -10,7 +10,7 @@ const Weather = () => {
     const day = days[date.getDay()];
     const months = ['jan', 'feb', 'march', 'apr', 'may', 'june', 'july', 'aug', 'sep', 'oct', 'nov', 'dec']
     const month = months[date.getMonth()]
-    const [search, setSearch] = useState('mumbai')
+    const [search, setSearch] = useState('jamui')
     const { data, loading, error } = useFetch(`https://api.openweathermap.org/data/2.5/weather?q=${search}&units=metric&appid=6ddb3070ef81dc8ad9a2934ab91be26b`)
 
     const { data: quotes } = useFetch(`https://api.quotable.io/random`)
@@ -61,7 +61,7 @@ const Weather = () => {
                                     </>
                                 }
                                 <h3 className='marg0'>
-                                    {`${date.getHours()} : ${date.getMinutes()}`} {date.getHours() > 12 ? 'pm' : 'am'}
+                                    {`${date.getHours()}:${date.getMinutes()}`} {date.getHours() > 12 ? 'pm' : 'am'}
 
                                 </h3>
                             </div>
@@ -118,7 +118,7 @@ const Weather = () => {
                                         <p className='marg0'>lon='{data.coord.lon}'</p>
                                         <p className='marg0'>lat='{data.coord.lat}' </p>
                                     </h3>
-                                    <p className='marg0'>pres: {data.main.pressure}hPa</p>
+                                    <p className='marg0'>press: {data.main.pressure}hPa</p>
                                     <p className='marg0'>hum:{data.main.humidity}%</p>
                                 </>
                         }
@@ -144,7 +144,7 @@ const Weather = () => {
                                     <h3 className='marg0'> max temp:
                                         <p className='marg0'>  {data.main.temp_max}&deg;C </p>
                                     </h3>
-                                    <h3 className='marg0'> max temp:
+                                    <h3 className='marg0'> min temp:
                                         <p className='marg0'>   {data.main.temp_min}&deg;C</p>
                                     </h3>
                                 </>

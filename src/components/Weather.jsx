@@ -49,7 +49,7 @@ const Weather = () => {
                                     </>
                                 }
                             </div>
-                            <div className="">
+                            <div className="left">
                                 <i className="fa-solid fa-location-dot fa-2x"></i>
                                 {
                                     <>

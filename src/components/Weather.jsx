@@ -12,6 +12,8 @@ const Weather = () => {
     const month = months[date.getMonth()]
     const [search, setSearch] = useState('mumbai')
     const { data, loading, error } = useFetch(`http://api.openweathermap.org/data/2.5/weather?q=${search}&units=metric&appid=7cab18b5480bd74503a5c61322b4225f `)
+
+    const { data: quotes } = useFetch(`https://api.quotable.io/random`)
     const searchHandler = (e) => {
         setSearch(e.target.value)
     }
@@ -23,7 +25,7 @@ const Weather = () => {
             <div className="container">
                 <picture className='top_box'>
 
-                    <img className='top_image' src="https://www.noaa.gov/sites/default/files/styles/landscape_width_1275/public/legacy/image/2019/Jun/PHOTO-dark%20and%20stormy%20cloudscape-istock-1125x534-Landscape.jpg?itok=xyVD1jOK" alt="state" loading='lazy' />
+                    <img className='top_image' src="https://source.unsplash.com/random/?city,night" alt="state" loading='lazy' />
 
                 </picture>
 
@@ -65,6 +67,21 @@ const Weather = () => {
                             </div>
                         </div>
                     }
+                    <div className="location_mid">
+                        <div className=''>
+                            {
+                                !quotes ? <p>fetching...</p>
+                                    :
+                                    <>
+                                        <h4>Quotes of the moment: </h4>
+                                        <p>{quotes.content}</p>
+                                        <p className='right_quotes'>author: {quotes.author}</p>
+                                    </>
+                            }
+                        </div>
+
+                    </div>
+
                     <div className="location2">
                         <div className='left2'>
                             <h2>location </h2>

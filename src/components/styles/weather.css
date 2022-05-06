@@ -45,7 +45,6 @@
     background: transparent;
    background-color: rgba(0,0,0, 0.4);
    border-radius: 10px;
-    backdrop-filter: blur(60px);
 }
 .left2{
       display: flex;

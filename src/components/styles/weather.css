@@ -130,3 +130,8 @@ input[type=search]:focus {
    min-height: 90vh;
 }
 }
+@media screen and (max-width:500px) {
+    .top_image{
+   min-height: 100vh;
+}
+}
